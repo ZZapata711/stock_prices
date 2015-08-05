@@ -31,7 +31,11 @@ puts "Selling price: #{selling_price} at position #{selling_index}"
 puts "Max profit: #{max_profit * -1}"
 end
 
-print "Enter array: "
-a = Array.new
-a = gets.chomp
-stock_picker(a)
+puts "Enter array: "
+str = gets.chomp
+puts str.class
+arr = str.split(/,/).map(&:to_i)
+puts arr.class
+puts arr.size
+puts arr.inspect
+stock_picker(arr)
